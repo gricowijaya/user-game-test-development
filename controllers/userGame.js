@@ -1,7 +1,4 @@
 const { UserGame } = require('../models');
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
-const { where } = require('sequelize');
 
 // const {
 //     JWT_SIGNATURE_KEY
@@ -28,7 +25,7 @@ module.exports = {
             });
 
             return res.status(200).json({
-                status: false,
+                status: true,
                 message: 'success',
                 data: newUsername
             });
@@ -49,7 +46,7 @@ module.exports = {
             });
 
             return res.status(200).json({
-                status: false,
+                status: true,
                 message: 'success',
                 data: userDetails
             });
