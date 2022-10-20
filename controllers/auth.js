@@ -31,7 +31,7 @@ module.exports = {
             console.log(user)
 
             return res.status(201).json({
-                status: false,
+                status: true,
                 message: 'success',
                 data: {
                     username: user.username,
@@ -69,10 +69,11 @@ module.exports = {
                 username: user.username,
                 email: user.email,
             };
+
             const token = jwt.sign(payload, JWT_SIGNATURE_KEY);
 
             return res.status(200).json({
-                status: false,
+                status: true,
                 message: 'success',
                 data: {
                     token: token
