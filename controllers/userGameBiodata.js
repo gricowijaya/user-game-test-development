@@ -21,12 +21,12 @@ module.exports = {
             }); 
 
             return res.status(200).json({
-                status: false,
+                status: true,
                 message: 'success',
                 data: createUserBiodata
             });
         } catch(error) {
-            next(error);
+            // next(error);
         }
     },
 
@@ -42,12 +42,12 @@ module.exports = {
             });
 
             return res.status(200).json({
-                status: false,
+                status: true,
                 message: 'success',
                 data: biodata
             });
         } catch (error) {
-            next(error)
+            // next(error)
         }
     },
 
@@ -68,7 +68,7 @@ module.exports = {
             }); 
 
             return res.status(200).json({
-                status: false,
+                status: true,
                 message: 'success',
                 data: updateUserBiodata
             });
@@ -88,7 +88,7 @@ module.exports = {
             });
 
             return res.status(200).json({
-                status: false,
+                status: true,
                 message: 'success',
                 data: biodataToBeDeleted
             });

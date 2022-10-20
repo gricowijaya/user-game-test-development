@@ -1,7 +1,6 @@
 const { UserGame } = require('../models');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const { where } = require('sequelize');
 
 const {
     JWT_SIGNATURE_KEY
@@ -39,7 +38,8 @@ module.exports = {
                 }
             });
         } catch (err) {
-            next(err);
+            // console.log(err);
+            // next(err);
         }
     },
 
@@ -80,7 +80,8 @@ module.exports = {
                 }
             });
         } catch (err) {
-            next(err);
+            // console.log(err)
+            // next(err);
         }
     },
 
@@ -128,12 +129,13 @@ module.exports = {
             }
 
             return res.status(200).json({
-                status: false,
+                status: true,
                 message: 'success',
                 data: update 
             });
         } catch (error) {
-            next(error)
+            console.log(error)
+            // next(error)
         }
     }
 };
