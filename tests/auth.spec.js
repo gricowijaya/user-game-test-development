@@ -9,11 +9,11 @@ const mockResponse = () => {
     return res;
 };
 
-// const jwt = require('jsonwebtoken');
+const jwt = require('jsonwebtoken');
 
-// const {
-//     JWT_SIGNATURE_KEY
-// } = process.env;
+const {
+    JWT_SIGNATURE_KEY
+} = process.env;
 
 describe('controllers.auth.register function', () => {
     // case success
@@ -98,3 +98,8 @@ describe('controllers.auth.changePassword function', () => {
         }
    });
 });
+
+
+const request = require('supertest');
+const index = require('../index');
+

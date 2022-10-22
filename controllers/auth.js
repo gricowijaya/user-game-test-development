@@ -39,7 +39,7 @@ module.exports = {
             });
         } catch (err) {
             // console.log(err);
-            // next(err);
+            next(err);
         }
     },
 
@@ -134,8 +134,8 @@ module.exports = {
                 data: update 
             });
         } catch (error) {
-            console.log(error)
-            // next(error)
+            // console.log(error)
+            next(error)
         }
     }
 };
